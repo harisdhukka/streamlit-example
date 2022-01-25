@@ -54,7 +54,7 @@ if uploaded_file is not None:
 
         # first phase is to showcase the basic stats like number of users,number of messages,number of media shared and all,so for that i requrire the 4 columns
 
-        col1, col2, col3, col4 = st.beta_columns(4)
+        col1, col2, col3, col4 = st.columns(4)
 
         with col1:
             st.header("Total Messages")
@@ -82,7 +82,7 @@ if uploaded_file is not None:
             st.title('Most Busy Users')
             busycount, newdf = stats.fetchbusyuser(df)
             fig, ax = plt.subplots()
-            col1, col2 = st.beta_columns(2)
+            col1, col2 = st.columns(2)
             with col1:
                 ax.bar(busycount.index, busycount.values, color='red')
                 plt.xticks(rotation='vertical')
@@ -139,7 +139,7 @@ if uploaded_file is not None:
 
         st.title("Activity Maps")
 
-        col1, col2 = st.beta_columns(2)
+        col1, col2 = st.columns(2)
 
         with col1:
 
